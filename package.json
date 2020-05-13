@@ -1,5 +1,13 @@
 {
-  "name": "frontend",
+  "name": "canionlabs-frontend",
+  "description": "frontend created using react to canionlabs",
+  "author": {
+    "name": "Canionlabs"
+  },
+  "contributors": [{
+    "name": "victor vitoria fontenele", 
+    "url": "https://github.com/victorvf"
+  }],
   "version": "0.1.0",
   "private": true,
   "dependencies": {
