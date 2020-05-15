@@ -32,5 +32,17 @@ export const Container = styled.div`
         border-bottom: 1px solid #8bc34a;
       }
     }
+
+    a.contact {
+      color: #0a1124;
+      padding: 5px;
+      border-radius: 4px;
+      background: #8bc34a;
+
+      &:hover {
+        border: 0;
+        opacity: 0.8;
+      }
+    }
   }
 `;
