@@ -2,7 +2,12 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
-import { FaAngleLeft, FaAngleRight, FaAngleDoubleDown } from 'react-icons/fa';
+import {
+  FaAngleLeft,
+  FaAngleRight,
+  FaAngleDoubleDown,
+  FaLongArrowAltRight,
+} from 'react-icons/fa';
 
 import BannerLogo from '../../assets/bannerlogo.png';
 import MonarLogo from '../../assets/monarlogo.png';
@@ -54,7 +59,10 @@ function Home() {
               unknown printer took a galley of type and scrambled it to make a
               type specimen book. It has survived not only five centuries.
             </p>
-            <a href="#sobre">Conheça o Monar</a>
+            <a href="#sobre">
+              Conheça o Monar
+              <FaLongArrowAltRight size={20} />
+            </a>
           </div>
         </div>
       </Product>

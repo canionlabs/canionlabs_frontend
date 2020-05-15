@@ -110,10 +110,24 @@ export const Product = styled.section`
       }
 
       a {
+        background: #8bc34a;
+        padding: 8px;
+        border-radius: 4px;
+        color: #0a1124;
         margin-top: 30px;
-        color: #8bc34a;
         align-self: flex-end;
         text-decoration: none;
+
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        svg {
+          margin-left: 8px;
+        }
       }
     }
   }

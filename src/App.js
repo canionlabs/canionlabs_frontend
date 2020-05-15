@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import Routes from './routes';
 
@@ -9,9 +9,9 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <StaticRouter>
+      <BrowserRouter>
         <Routes />
-      </StaticRouter>
+      </BrowserRouter>
     </>
   );
 }
