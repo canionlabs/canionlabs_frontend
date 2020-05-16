@@ -13,7 +13,9 @@ function Header() {
         <div>
           <a href="#about">Sobre</a>
           <a href="#products">Produtos</a>
-          <a href="#contact">Contato</a>
+          <a href="#contact" className="contact">
+            Contato
+          </a>
         </div>
       </Container>
     </NavBar>

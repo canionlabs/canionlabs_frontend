@@ -13,20 +13,24 @@ function Footer() {
     <Content>
       <Container>
         <div className="social-media">
-          <a href="#test">
+          <a href="https://github.com/canionlabs" target="blank">
             <FaGithubSquare size={35} />
           </a>
 
-          <a href="#test">
+          <a href="https://www.instagram.com/canionlabs.io/" target="blank">
             <FaInstagram size={35} />
           </a>
 
-          <a href="#test">
+          <a
+            href="https://www.linkedin.com/company/canionlabs/about/"
+            target="blank"
+          >
             <FaLinkedin size={35} />
           </a>
         </div>
         <div className="canion">
-          <span>© CanionLabs</span>
+          <strong>© CanionLabs</strong>
+          <span>(86) 99834-4395</span>
         </div>
         <div className="go-back">
           <a href="#top">

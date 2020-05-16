@@ -7,7 +7,7 @@ export const NavBar = styled.nav`
 export const Container = styled.div`
   margin: 0 auto;
   max-width: 1280px;
-  padding: 10px 30px;
+  padding: 20px 30px;
 
   display: flex;
   align-items: center;
@@ -30,6 +30,18 @@ export const Container = styled.div`
       &:hover {
         opacity: 0.8;
         border-bottom: 1px solid #8bc34a;
+      }
+    }
+
+    a.contact {
+      color: #0a1124;
+      padding: 5px;
+      border-radius: 4px;
+      background: #8bc34a;
+
+      &:hover {
+        border: 0;
+        opacity: 0.8;
       }
     }
   }

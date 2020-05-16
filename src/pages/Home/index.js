@@ -22,11 +22,9 @@ function Home() {
     <>
       <Header />
       <Content>
-        <div>
-          <img src={BannerLogo} alt="" />
-          <p>Frase de efeito sobre a Canionlabs</p>
-          <FaAngleDoubleDown size={20} />
-        </div>
+        <img src={BannerLogo} alt="" />
+        <p>Frase de efeito sobre a Canionlabs</p>
+        <FaAngleDoubleDown size={20} />
       </Content>
       <About id="about">
         <h3>
@@ -49,7 +47,7 @@ function Home() {
           <FaAngleRight size={25} />
           Produtos
         </h3>
-        <div>
+        <div className="product-content">
           <img src={MonarLogo} alt="Logo Monar" />
           <div>
             <p>
@@ -59,7 +57,7 @@ function Home() {
               unknown printer took a galley of type and scrambled it to make a
               type specimen book. It has survived not only five centuries.
             </p>
-            <a href="#sobre">
+            <a href="https://monar.canionlabs.io/#/" target="blank">
               Conheça o Monar
               <FaLongArrowAltRight size={20} />
             </a>
@@ -82,17 +80,23 @@ function Home() {
             tabIndex="0"
           />
 
-          <form action="submit">
+          <form action="https://formspree.io/caio@canionlabs.io" method="POST">
             <span>Nome Completo:</span>
-            <input type="text" placeholder="Ex: Caio Victor" />
+            <input type="text" placeholder="Ex: Caio Victor" name="nome" />
 
             <span>E-mail:</span>
-            <input type="email" placeholder="Ex: canion@e-mail.com" />
+            <input
+              type="email"
+              placeholder="Ex: canion@e-mail.com"
+              name="_replyto"
+            />
 
             <span>Telefone:</span>
-            <input type="text" placeholder="(00) 0 0000-0000" />
+            <input type="text" placeholder="(00) 0 0000-0000" name="telefone" />
 
-            <button type="submit">Enviar</button>
+            <button type="submit" value="Send">
+              Enviar
+            </button>
           </form>
         </div>
       </Contact>

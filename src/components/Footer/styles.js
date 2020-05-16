@@ -37,8 +37,18 @@ export const Container = styled.div`
   }
 
   div.canion {
-    span {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    strong {
       color: #8bc34a;
+    }
+
+    span {
+      font-size: 14px;
+      color: #8bc34a;
+      margin-top: 2px;
     }
   }
 
