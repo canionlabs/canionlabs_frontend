@@ -10,7 +10,6 @@ export const Content = styled.footer`
 
 export const Container = styled.div`
   width: 1080px;
-  max-width: 1080px;
   margin: 0 auto;
 
   display: flex;
@@ -67,6 +66,22 @@ export const Container = styled.div`
       svg {
         margin-left: 5px;
       }
+    }
+  }
+
+  @media only screen and (max-width: 1080px) {
+    & {
+      padding: 0 25px;
+    }
+  }
+
+  @media only screen and (max-width: 570px) {
+    & {
+      justify-content: space-evenly;
+    }
+
+    div.go-back {
+      display: none;
     }
   }
 `;

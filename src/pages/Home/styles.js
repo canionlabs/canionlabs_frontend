@@ -40,6 +40,13 @@ export const Content = styled.div`
   section {
     margin-top: 100px;
   }
+
+  @media only screen and (max-width: ${maxWidth}) {
+    img {
+      height: 150px;
+      width: 300px;
+    }
+  }
 `;
 
 export const About = styled.section`
@@ -59,6 +66,12 @@ export const About = styled.section`
   p {
     color: #0a1124;
     text-align: justify;
+  }
+
+  @media only screen and (max-width: ${maxWidth}) {
+    & {
+      padding: 80px 25px;
+    }
   }
 `;
 
@@ -137,6 +150,35 @@ export const Product = styled.section`
       }
     }
   }
+
+  @media only screen and (max-width: ${maxWidth}) {
+    & {
+      padding: 80px 25px;
+    }
+  }
+
+  @media only screen and (max-width: 890px) {
+    div.product-content {
+      padding: 10px;
+      flex-direction: column;
+
+      &:hover {
+        transform: none;
+      }
+
+      img {
+        height: 82px;
+        width: 198px;
+        margin-right: 0;
+        margin: 30px 0;
+      }
+
+      div {
+        border-left: 0;
+        border-top: 1px solid #fff;
+      }
+    }
+  }
 `;
 
 export const Contact = styled.section`
@@ -197,6 +239,28 @@ export const Contact = styled.section`
         &:hover {
           opacity: 0.9;
         }
+      }
+    }
+  }
+
+  @media only screen and (max-width: ${maxWidth}) {
+    & {
+      padding: 80px 25px;
+    }
+  }
+
+  @media only screen and (max-width: 890px) {
+    div.contact-form {
+      flex-direction: column-reverse;
+
+      form {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      iframe {
+        width: 100%;
+        margin-right: 0;
       }
     }
   }
