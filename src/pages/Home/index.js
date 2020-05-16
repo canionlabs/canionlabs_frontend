@@ -22,11 +22,9 @@ function Home() {
     <>
       <Header />
       <Content>
-        <div>
-          <img src={BannerLogo} alt="" />
-          <p>Frase de efeito sobre a Canionlabs</p>
-          <FaAngleDoubleDown size={20} />
-        </div>
+        <img src={BannerLogo} alt="" />
+        <p>Frase de efeito sobre a Canionlabs</p>
+        <FaAngleDoubleDown size={20} />
       </Content>
       <About id="about">
         <h3>
@@ -49,7 +47,7 @@ function Home() {
           <FaAngleRight size={25} />
           Produtos
         </h3>
-        <div>
+        <div className="product-content">
           <img src={MonarLogo} alt="Logo Monar" />
           <div>
             <p>

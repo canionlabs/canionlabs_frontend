@@ -12,30 +12,29 @@ const blink = keyframes`
 `;
 
 export const Content = styled.div`
-  div {
-    background: #757575;
-    padding: 45px 0;
+  height: 95vh;
+  background: #757575;
+  padding: 45px 0;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    img {
-      height: 250px;
-      width: 500px;
+  img {
+    height: 250px;
+    width: 500px;
 
-      margin-bottom: 40px;
-    }
+    margin-bottom: 40px;
+  }
 
-    p {
-      color: #0a1124;
-    }
+  p {
+    color: #0a1124;
+  }
 
-    svg {
-      margin-top: 80px;
-      animation: ${blink} 1.5s cubic-bezier(0.5, 0, 1, 1) infinite;
-    }
+  svg {
+    margin-top: 80px;
+    animation: ${blink} 1.5s cubic-bezier(0.5, 0, 1, 1) infinite;
   }
 
   section {
@@ -81,8 +80,15 @@ export const Product = styled.section`
   div {
     margin: 0 auto;
     padding: 30px;
-    border: 1px solid #0a1124;
+    border: 0;
     border-radius: 4px;
+    background: #0a1124;
+    box-shadow: 5px 5px 12px #0a1124;
+    transition: transform 0.5s;
+
+    &.product-content:hover {
+      transform: translateX(10px);
+    }
 
     display: flex;
     flex: 1;
@@ -97,7 +103,7 @@ export const Product = styled.section`
 
     div {
       border: 0;
-      border-left: 1px solid #0a1124;
+      border-left: 1px solid #fff;
       border-radius: 0;
 
       display: flex;
@@ -105,7 +111,7 @@ export const Product = styled.section`
       flex-direction: column;
 
       p {
-        color: #0a1124;
+        color: #fff;
         text-align: justify;
       }
 
@@ -182,14 +188,14 @@ export const Contact = styled.section`
 
       button {
         color: #0a1124;
-        background: #a7ee55;
+        background: #8bc34a;
         border: 0;
         border-radius: 6px;
         padding: 10px 15px;
         transition: opacity 0.2s;
 
         &:hover {
-          opacity: 0.8;
+          opacity: 0.9;
         }
       }
     }
