@@ -1,13 +1,16 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   FaAngleLeft,
   FaAngleRight,
   FaAngleDoubleDown,
   FaLongArrowAltRight,
 } from 'react-icons/fa';
+
+// só lembra de trocar a url de acesso nessa pasta ai.
+import api from '../../services/api';
 
 import BannerLogo from '../../assets/bannerlogo.png';
 import MonarLogo from '../../assets/monarlogo.png';
@@ -17,13 +20,36 @@ import Footer from '../../components/Footer';
 
 import { Content, About, Product, Contact } from './styles';
 
-function Home() {
+export default function Home() {
+  // setHeaderText é como se fosse o seguinte text.push('exemplo'),
+  // só que você usa assim: setHeaderText('exemplo') e dentro do: headerText,
+  // vai ter o valor que você guardou.
+  const [headerText, setHeaderText] = useState('');
+  const [aboutText, setAboutText] = useState('');
+
+  // caso a gente tenha mais produtos, podemos mudar para um array ([])
+  const [productText, setProductText] = useState('');
+
+  // Essa função vai ser executada assim que o site carregar, que o component for montado em tela.
+  // você faz as requests aqui no caso, ai na hora que tela carregar, ele vai na api e busca os textos.
+  // com a response, só você usar os "SET" acima.
+  useEffect(() => {
+    async function loadTexts() {
+      // TODO
+    }
+
+    loadTexts();
+  }, []);
+
   return (
     <>
       <Header />
       <Content>
         <img src={BannerLogo} alt="" />
-        <p>Frase de efeito sobre a Canionlabs</p>
+        <p>
+          {/* com os textos, basta você usar assim: {headerText} */}
+          Frase de efeito sobre a Canionlabs
+        </p>
         <FaAngleDoubleDown size={20} />
       </Content>
       <About id="about">
@@ -32,6 +58,7 @@ function Home() {
           <FaAngleLeft size={25} />
         </h3>
         <p>
+          {/* com os textos, basta você usar assim: {aboutText} */}
           is simply dummy text of the printing and typesetting industry. Lorem
           Ipsum has been the industrys standard dummy text ever since the 1500s,
           when an unknown printer took a galley of type and scrambled it to make
@@ -51,6 +78,7 @@ function Home() {
           <img src={MonarLogo} alt="Logo Monar" />
           <div>
             <p>
+              {/* com os textos, basta você usar assim: {productText} */}
               It has survived not only five centuries, is simply dummy text of
               the printing and typesetting industry. Lorem Ipsum has been the
               industrys standard dummy text ever since the 1500s, when an
@@ -104,5 +132,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;
