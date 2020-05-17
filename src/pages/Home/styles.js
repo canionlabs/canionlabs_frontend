@@ -29,17 +29,19 @@ export const Content = styled.div`
   img {
     height: 250px;
     width: 500px;
-
     margin-bottom: 40px;
   }
 
   p {
-    color: #0a1124;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: lighter;
   }
 
   svg {
-    margin-top: 80px;
-    animation: ${blink} 1.5s cubic-bezier(0.5, 0, 1, 1) infinite;
+    position: absolute;
+    bottom: 20px;
+    animation: ${blink} 2s cubic-bezier(0.5, 0, 1, 1) infinite;
   }
 
   section {

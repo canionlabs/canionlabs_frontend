@@ -48,9 +48,9 @@ export default function Home() {
         <img src={BannerLogo} alt="" />
         <p>
           {/* com os textos, basta você usar assim: {headerText} */}
-          Frase de efeito sobre a Canionlabs
+          Nós tornamos a Internet das Coisas simples para sua empresa
         </p>
-        <FaAngleDoubleDown size={20} />
+        <FaAngleDoubleDown color="#ffffff" size={20} />
       </Content>
       <About id="about">
         <h3>
