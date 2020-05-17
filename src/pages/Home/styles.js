@@ -13,7 +13,12 @@ const blink = keyframes`
 
 export const Content = styled.div`
   height: 95vh;
-  background: #757575;
+  background: linear-gradient(
+    45deg,
+    rgba(10, 17, 35, 0.96) 25%,
+    rgba(58, 56, 56, 0.96) 100%,
+    rgba(137, 195, 84, 0.34) 100%
+  );
   padding: 45px 0;
 
   display: flex;
