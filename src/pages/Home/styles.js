@@ -72,6 +72,8 @@ export const About = styled.section`
 
   p {
     color: #0a1124;
+    font-size: 20px;
+    font-weight: lighter;
     text-align: justify;
   }
 
