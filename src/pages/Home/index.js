@@ -48,9 +48,9 @@ export default function Home() {
         <img src={BannerLogo} alt="" />
         <p>
           {/* com os textos, basta você usar assim: {headerText} */}
-          Frase de efeito sobre a Canionlabs
+          Nós tornamos a Internet das Coisas simples para sua empresa
         </p>
-        <FaAngleDoubleDown size={20} />
+        <FaAngleDoubleDown color="#ffffff" size={20} />
       </Content>
       <About id="about">
         <h3>
@@ -59,14 +59,10 @@ export default function Home() {
         </h3>
         <p>
           {/* com os textos, basta você usar assim: {aboutText} */}
-          is simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industrys standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make
-          a type specimen book. It has survived not only five centuries, is
-          simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industrys standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make
-          a type specimen book. It has survived not only five centuries.
+          A CanionLabs é uma companhia focada no desenvolvimento de soluções de
+          IoT para o comércio e indústria.
+          Através de soluções conectadas baseadas em Software e Hardware,
+          trazemos modernidade e oportunidades para dentro da sua empresa.
         </p>
       </About>
       <Product id="products">

@@ -13,7 +13,12 @@ const blink = keyframes`
 
 export const Content = styled.div`
   height: 95vh;
-  background: #757575;
+  background: linear-gradient(
+    45deg,
+    rgba(10, 17, 35, 0.96) 25%,
+    rgba(58, 56, 56, 0.96) 100%,
+    rgba(137, 195, 84, 0.34) 100%
+  );
   padding: 45px 0;
 
   display: flex;
@@ -24,17 +29,19 @@ export const Content = styled.div`
   img {
     height: 250px;
     width: 500px;
-
     margin-bottom: 40px;
   }
 
   p {
-    color: #0a1124;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: lighter;
   }
 
   svg {
-    margin-top: 80px;
-    animation: ${blink} 1.5s cubic-bezier(0.5, 0, 1, 1) infinite;
+    position: absolute;
+    bottom: 20px;
+    animation: ${blink} 2s cubic-bezier(0.5, 0, 1, 1) infinite;
   }
 
   section {
@@ -65,6 +72,8 @@ export const About = styled.section`
 
   p {
     color: #0a1124;
+    font-size: 20px;
+    font-weight: lighter;
     text-align: justify;
   }
 
