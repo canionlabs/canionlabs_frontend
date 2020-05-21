@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const NavBar = styled.nav`
   background: #0a1124;
@@ -19,7 +20,7 @@ export const Container = styled.div`
   }
 
   div {
-    a {
+    > a {
       color: #8bc34a;
       text-decoration: none;
 
@@ -28,7 +29,7 @@ export const Container = styled.div`
       }
 
       &:hover {
-        opacity: 0.8;
+        color: ${shade(0.2, '#8bc34a')};
         border-bottom: 1px solid #8bc34a;
       }
     }
@@ -41,7 +42,7 @@ export const Container = styled.div`
 
       &:hover {
         border: 0;
-        opacity: 0.8;
+        background: ${shade(0.2, '#8bc34a')};
       }
     }
   }
