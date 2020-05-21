@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { shade } from 'polished';
 
 const maxWidth = '1080px';
 
@@ -11,7 +12,7 @@ const blink = keyframes`
   }
 `;
 
-export const Content = styled.div`
+export const ContentPage = styled.div`
   height: 95vh;
   background: linear-gradient(
     45deg,
@@ -33,7 +34,7 @@ export const Content = styled.div`
   }
 
   p {
-    color: #ffffff;
+    color: #fff;
     font-size: 22px;
     font-weight: lighter;
   }
@@ -84,7 +85,7 @@ export const About = styled.section`
   }
 `;
 
-export const Product = styled.section`
+export const ProductContainer = styled.section`
   margin: 0 auto;
   max-width: ${maxWidth};
   padding: 80px 0;
@@ -98,96 +99,13 @@ export const Product = styled.section`
     align-items: center;
     justify-content: flex-end;
   }
+`;
 
-  div {
-    margin: 0 auto;
-    padding: 30px;
-    border: 0;
-    border-radius: 4px;
-    background: #0a1124;
-    box-shadow: 5px 5px 12px #0a1124;
-    transition: transform 0.5s;
-
-    &.product-content:hover {
-      transform: translateX(10px);
-    }
-
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: space-between;
-
-    img {
-      height: 115px;
-      width: 296px;
-      margin-right: 30px;
-    }
-
-    div {
-      border: 0;
-      border-left: 1px solid #fff;
-      border-radius: 0;
-
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-
-      p {
-        color: #fff;
-        text-align: justify;
-      }
-
-      a {
-        background: #8bc34a;
-        padding: 8px;
-        border-radius: 4px;
-        color: #0a1124;
-        margin-top: 30px;
-        align-self: flex-end;
-        text-decoration: none;
-
-        display: flex;
-        align-items: center;
-
-        &:hover {
-          opacity: 0.8;
-        }
-
-        svg {
-          margin-left: 8px;
-        }
-      }
-    }
-  }
-
-  @media only screen and (max-width: ${maxWidth}) {
-    & {
-      padding: 80px 25px;
-    }
-  }
-
-  @media only screen and (max-width: 890px) {
-    div.product-content {
-      padding: 10px;
-      flex-direction: column;
-
-      &:hover {
-        transform: none;
-      }
-
-      img {
-        height: 82px;
-        width: 198px;
-        margin-right: 0;
-        margin: 30px 0;
-      }
-
-      div {
-        border-left: 0;
-        border-top: 1px solid #fff;
-      }
-    }
-  }
+export const ProductContent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Contact = styled.section`
@@ -243,10 +161,10 @@ export const Contact = styled.section`
         border: 0;
         border-radius: 6px;
         padding: 10px 15px;
-        transition: opacity 0.2s;
+        transition: background-color 0.2s;
 
         &:hover {
-          opacity: 0.9;
+          background: ${shade(0.2, '#8bc34a')};
         }
       }
     }

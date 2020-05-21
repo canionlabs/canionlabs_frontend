@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Content = styled.footer`
   height: 80px;
@@ -21,16 +22,15 @@ export const Container = styled.div`
     align-items: center;
 
     a {
-      &:hover {
-        opacity: 0.7;
-      }
+      color: #8bc34a;
+      transition: color 0.2s;
 
       & + a {
         margin-left: 15px;
       }
 
-      svg {
-        color: #8bc34a;
+      &:hover {
+        color: ${shade(0.2, '#8bc34a')};
       }
     }
   }
