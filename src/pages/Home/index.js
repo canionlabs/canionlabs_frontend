@@ -49,7 +49,7 @@ export default function Home() {
 
         <ProductContent>
           {/* imageProduct, será a image que ficar exposta */}
-          <ProductCard title="MES">
+          <ProductCard title="MES" linkDisabled>
             {/* Tudo que você passar aqui dentro será colocado no hover */}
             <p>
               A proposta do MES é solucionar as falhas que ocorrem durante a
@@ -57,7 +57,7 @@ export default function Home() {
               processos de produção industrial e resolver a falta de controle e
               análise dos itens produzidos.
             </p>
-            <a target="blank" href="https://monar.canionlabs.io/#/">
+            <a href="mes">
               Conheça o MES
               <FiArrowRight size={20} />
             </a>
@@ -77,14 +77,14 @@ export default function Home() {
             </a>
           </ProductCard>
 
-          <ProductCard title="GLACIER">
+          <ProductCard title="GLACIER" linkDisabled>
             {/* Tudo que você passar aqui dentro será colocado no hover */}
             <p>
               Plataforma de controle remoto para ar-condicionados, composto por
               sistemas integrados com hardware equipado com sensores/emissores
               de interação.
             </p>
-            <a target="blank" href="https://monar.canionlabs.io/#/">
+            <a href="glacier">
               Conheça o Glacier
               <FiArrowRight size={20} />
             </a>

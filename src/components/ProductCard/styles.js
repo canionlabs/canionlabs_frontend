@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { shade } from 'polished';
 
 const Width = '340px';
@@ -66,9 +66,9 @@ export const Container = styled.div`
       border: 0;
       color: #0a1124;
       padding: 5px;
-      border-radius: 12px 4px 12px 12px;
+      border-radius: 4px;
       margin-top: 20px;
-      background: #8bc34a;
+      background: #a7ee55;
       text-decoration: none;
 
       align-self: flex-end;
@@ -78,8 +78,16 @@ export const Container = styled.div`
 
       transition: background-color 0.2s;
 
+      ${(props) =>
+        props.linkDisabled &&
+        css`
+          opacity: 0.7;
+          cursor: not-allowed;
+          pointer-events: none;
+        `}
+
       &:hover {
-        background: ${shade(0.2, '#8bc34a')};
+        background: ${shade(0.2, '#A7EE55')};
       }
 
       svg {

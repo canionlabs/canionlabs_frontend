@@ -50,9 +50,17 @@ export const ContentPage = styled.div`
   }
 
   @media only screen and (max-width: ${maxWidth}) {
-    img {
-      height: 150px;
-      width: 300px;
+    & {
+      padding: 0 10px;
+
+      p {
+        text-align: center;
+      }
+
+      img {
+        height: 150px;
+        width: 300px;
+      }
     }
   }
 `;
@@ -81,6 +89,10 @@ export const About = styled.section`
   @media only screen and (max-width: ${maxWidth}) {
     & {
       padding: 80px 25px;
+
+      p {
+        text-align: center;
+      }
     }
   }
 `;
@@ -98,6 +110,14 @@ export const ProductContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+
+  @media only screen and (max-width: ${maxWidth}) {
+    & {
+      h3 {
+        margin-right: 25px;
+      }
+    }
   }
 `;
 
