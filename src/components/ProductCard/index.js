@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 
 import { Container } from './styles';
 
-export default function ProductCard({ title, imageProduct, children }) {
+export default function ProductCard({
+  title,
+  imageProduct,
+  linkDisabled,
+  children,
+}) {
   // <ProcuctCard>  tudo que você passar aqui dentro la na Home,
   // é chamado de CHILDREN. que são os filhos da tag  </ProductCard>
 
   return (
-    <Container>
+    <Container linkDisabled={linkDisabled}>
       <div>
         {imageProduct ? (
           <img src={imageProduct} alt="logo" />
@@ -24,6 +29,7 @@ export default function ProductCard({ title, imageProduct, children }) {
 ProductCard.propTypes = {
   title: PropTypes.string,
   imageProduct: PropTypes.string,
+  linkDisabled: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.element])
     .isRequired,
 };
@@ -31,4 +37,5 @@ ProductCard.propTypes = {
 ProductCard.defaultProps = {
   title: '',
   imageProduct: '',
+  linkDisabled: false,
 };
