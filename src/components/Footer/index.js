@@ -6,9 +6,13 @@ import {
   FaAngleUp,
 } from 'react-icons/fa';
 
+import { useLanguage } from '../../hooks/language';
+
 import { Content, Container } from './styles';
 
-function Footer() {
+export default function Footer() {
+  const { goBackButton } = useLanguage();
+
   return (
     <Content>
       <Container>
@@ -34,7 +38,7 @@ function Footer() {
         </div>
         <div className="go-back">
           <a href="#top">
-            Voltar ao início
+            {goBackButton}
             <FaAngleUp size={20} />{' '}
           </a>
         </div>
@@ -42,5 +46,3 @@ function Footer() {
     </Content>
   );
 }
-
-export default Footer;

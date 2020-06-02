@@ -79,7 +79,7 @@ export const Container = styled.div`
       transition: background-color 0.2s;
 
       ${(props) =>
-        props.linkDisabled &&
+        !props.hasLink &&
         css`
           opacity: 0.7;
           cursor: not-allowed;
