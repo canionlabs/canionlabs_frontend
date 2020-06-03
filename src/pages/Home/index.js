@@ -32,6 +32,8 @@ export default function Home() {
     products,
     nameDescriptionForm,
     cellphoneDescriptionForm,
+    messageDescriptionForm,
+    messagePlaceholderForm,
     sendButton,
   } = useLanguage();
 
@@ -96,17 +98,24 @@ export default function Home() {
 
           <form action="https://formspree.io/caio@canionlabs.io" method="POST">
             <span>{nameDescriptionForm}:</span>
-            <input type="text" placeholder="Ex: Caio Victor" name="nome" />
+            <input type="text" placeholder="John Doe" name="nome" />
 
             <span>E-mail:</span>
             <input
               type="email"
-              placeholder="Ex: canion@e-mail.com"
+              placeholder="johndoe@email.com"
               name="_replyto"
             />
 
             <span>{cellphoneDescriptionForm}:</span>
             <input type="text" placeholder="(00) 0 0000-0000" name="telefone" />
+
+            <span>{messageDescriptionForm}:</span>
+            <textarea
+              name="qtd de pontos"
+              rows="4"
+              placeholder={messagePlaceholderForm}
+            />
 
             <button type="submit" value="Send">
               {sendButton}

@@ -19,6 +19,8 @@ const INITIAL_VALUES = {
   sendButton: '',
   goBackButton: '',
   nameDescriptionForm: '',
+  messageDescriptionForm: '',
+  messagePlaceholderForm: '',
   cellphoneDescriptionForm: '',
   handleLanguageEN: Promise,
   handleLanguagePT: Promise,
@@ -40,6 +42,8 @@ function LanguageProvider({ children }) {
 
   const [nameDescriptionForm, setNameDescriptionForm] = useState('');
   const [cellphoneDescriptionForm, setCellphoneDescriptionForm] = useState('');
+  const [messageDescriptionForm, setMessageDescriptionForm] = useState('');
+  const [messagePlaceholderForm, setMessagePlaceholderForm] = useState('');
 
   // set all staties
   const handleStates = useCallback((data) => {
@@ -53,6 +57,8 @@ function LanguageProvider({ children }) {
 
     setNameDescriptionForm(data.name_description_form);
     setCellphoneDescriptionForm(data.cellphone_description_form);
+    setMessageDescriptionForm(data.message_description_form);
+    setMessagePlaceholderForm(data.message_placeholder_form);
 
     setSendButton(data.send_button);
     setGoBackButton(data.go_back_button);
@@ -90,6 +96,8 @@ function LanguageProvider({ children }) {
         goBackButton,
         nameDescriptionForm,
         cellphoneDescriptionForm,
+        messageDescriptionForm,
+        messagePlaceholderForm,
         handleLanguagePT,
         handleLanguageEN,
       }}

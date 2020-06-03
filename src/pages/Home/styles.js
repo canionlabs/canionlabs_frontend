@@ -162,6 +162,21 @@ export const Contact = styled.section`
         }
       }
 
+      textarea {
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+
+        color: #0a1124;
+        border: 1px solid #0a1124;
+        border-radius: 6px;
+        padding: 10px 15px;
+        margin-bottom: 30px;
+
+        &::placeholder {
+          color: #0a1124;
+        }
+      }
+
       button {
         color: #0a1124;
         background: #8bc34a;
