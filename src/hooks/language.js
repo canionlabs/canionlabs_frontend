@@ -45,7 +45,7 @@ function LanguageProvider({ children }) {
   const [messageDescriptionForm, setMessageDescriptionForm] = useState('');
   const [messagePlaceholderForm, setMessagePlaceholderForm] = useState('');
 
-  // set all staties
+  // set all states
   const handleStates = useCallback((data) => {
     setAboutLink(data.about_link);
     setProductsLink(data.product_link);

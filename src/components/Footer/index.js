@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="go-back">
           <a href="#top">
             {goBackButton}
-            <FaAngleUp size={20} />{' '}
+            <FaAngleUp size={20} />
           </a>
         </div>
       </Container>

@@ -29,6 +29,7 @@ export default function NavBar() {
       <Content>
         <img src={Logo} alt="Logo Canionlabs" />
 
+        {/* When the page is MORE than 850px wide, this Menu will have display: block */}
         <LargeMenu>
           <a href={`#${aboutLink}`}>{aboutLink}</a>
           <a href={`#${productLink}`}>{productLink}</a>
@@ -48,6 +49,7 @@ export default function NavBar() {
           </button>
         </LargeMenu>
 
+        {/* and when the page is LESS than 850px wide, this Menu will have display: block */}
         <SmallMenu>
           {showMenu ? (
             <div className="links">
