@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { shade } from 'polished';
 
 const maxWidth = '1080px';
@@ -65,19 +65,25 @@ export const ContentPage = styled.div`
   }
 `;
 
+export const MainTextSections = styled.h3`
+  color: #8bc34a;
+  font-size: 25px;
+  margin-bottom: 50px;
+
+  display: flex;
+  align-items: center;
+
+  ${(props) =>
+    props.right &&
+    css`
+      justify-content: flex-end;
+    `}
+`;
+
 export const About = styled.section`
   margin: 0 auto;
   max-width: ${maxWidth};
   padding: 80px 0;
-
-  h3 {
-    color: #8bc34a;
-    font-size: 25px;
-    margin-bottom: 50px;
-
-    display: flex;
-    align-items: center;
-  }
 
   p {
     color: #0a1124;
@@ -102,16 +108,6 @@ export const ProductContainer = styled.section`
   max-width: ${maxWidth};
   padding: 80px 0;
 
-  h3 {
-    color: #8bc34a;
-    font-size: 25px;
-    margin-bottom: 50px;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
   @media only screen and (max-width: ${maxWidth}) {
     & {
       h3 {
@@ -132,15 +128,6 @@ export const Contact = styled.section`
   margin: 0 auto;
   max-width: ${maxWidth};
   padding: 80px 0;
-
-  h3 {
-    color: #8bc34a;
-    font-size: 25px;
-    margin-bottom: 50px;
-
-    display: flex;
-    align-items: center;
-  }
 
   div {
     display: flex;
@@ -164,6 +151,21 @@ export const Contact = styled.section`
       }
 
       input {
+        color: #0a1124;
+        border: 1px solid #0a1124;
+        border-radius: 6px;
+        padding: 10px 15px;
+        margin-bottom: 30px;
+
+        &::placeholder {
+          color: #0a1124;
+        }
+      }
+
+      textarea {
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+
         color: #0a1124;
         border: 1px solid #0a1124;
         border-radius: 6px;

@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-// essa aqui você sabe kkkkkk
 const api = axios.create({
-  baseURL: 'http://localhost:1234',
+  baseURL: process.env.REACT_APP_CMS_BASE_URL,
 });
 
 export default api;
