@@ -21,8 +21,8 @@ export default function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
 
   const handleShowMenu = useCallback(() => {
-    setShowMenu(!showMenu);
-  }, [showMenu]);
+    setShowMenu((prevState) => !prevState);
+  }, []);
 
   return (
     <Container>
