@@ -27,7 +27,7 @@ export default function NavBar() {
   return (
     <Container>
       <Content>
-        <img src={Logo} alt="Logo Canionlabs" />
+        <img src={Logo} alt="Canionlabs" />
 
         {/* When the page is MORE than 850px wide, this Menu will have display: block */}
         <LargeMenu>
@@ -42,10 +42,10 @@ export default function NavBar() {
             onClick={handleLanguagePT}
             className="first-button"
           >
-            <img src={IconBrazil} alt="brazil flag" />
+            <img src={IconBrazil} alt="Brazil's flag" />
           </button>
           <button type="button" onClick={handleLanguageEN}>
-            <img src={IconUSA} alt="usa flag" />
+            <img src={IconUSA} alt="United states's flag" />
           </button>
         </LargeMenu>
 
@@ -60,10 +60,10 @@ export default function NavBar() {
               </a>
               <div>
                 <button type="button" onClick={handleLanguagePT}>
-                  <img src={IconBrazil} alt="brazil flag" />
+                  <img src={IconBrazil} alt="Brazil's flag" />
                 </button>
                 <button type="button" onClick={handleLanguageEN}>
-                  <img src={IconUSA} alt="usa flag" />
+                  <img src={IconUSA} alt="United states's flag" />
                 </button>
               </div>
             </div>
