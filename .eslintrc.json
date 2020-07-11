@@ -36,6 +36,7 @@
       "no-param-reassign": "off",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
-      "camelcase": "off"
+      "camelcase": "off",
+      "jsx-a11y/no-noninteractive-tabindex": "off"
     }
 }
