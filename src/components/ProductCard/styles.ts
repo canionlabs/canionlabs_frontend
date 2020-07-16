@@ -4,7 +4,11 @@ import { shade } from 'polished';
 const Width = '340px';
 const Height = '240px';
 
-export const Container = styled.div`
+interface ContainerProps {
+  hasLink: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   color: #fff;
   margin: 10px;
   width: ${Width};
@@ -78,8 +82,8 @@ export const Container = styled.div`
 
       transition: background-color 0.2s;
 
-      ${(props) =>
-        !props.hasLink &&
+      ${({ hasLink }) =>
+        !hasLink &&
         css`
           opacity: 0.7;
           cursor: not-allowed;
