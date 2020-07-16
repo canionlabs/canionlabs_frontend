@@ -31,10 +31,11 @@ export const Container = styled.div<ContainerProps>`
     opacity: 1;
   }
 
-  img {
+  /* we currently haven't product images */
+  /* img {
     width: 250px;
     height: 100px;
-  }
+  } */
 
   strong {
     font-size: 50px;
