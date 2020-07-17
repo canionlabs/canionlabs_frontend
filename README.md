@@ -1,8 +1,6 @@
 <h1 align="center">
-    <img alt="GoStack" src="src/assets/logo.png" width="120px" />
+    <img alt="GoStack" src=".github/logo-horizontal.png" width="350px" />
 </h1>
-
-<h2 align="center">CanionLabs Website</h2>
 
 <p align="center">
   <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -19,17 +17,17 @@
 
 ```
 # install dependencies
-yarn
+  yarn
 # or
-yarn install
+  yarn install
 
 # serve with hot reload at localhost:3000
-yarn start
+  yarn start
 
 # build for production
-yarn build
+  yarn build
 ```
 
 ### :memo: License:
 
-This project is under the MIT license. See the archive [LICENSE]() for more details.
+This project is under the MIT license. See the archive [LICENSE](https://github.com/canionlabs/Canionlabs_frontend/blob/master/LICENSE.txt) for more details.
