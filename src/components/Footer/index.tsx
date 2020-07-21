@@ -10,8 +10,8 @@ import { useLanguage } from '../../hooks/language';
 
 import { Content, Container } from './styles';
 
-export default function Footer() {
-  const { goBackButton } = useLanguage();
+const Footer: React.FC = () => {
+  const { go_back_button } = useLanguage();
 
   return (
     <Content>
@@ -38,11 +38,13 @@ export default function Footer() {
         </div>
         <div className="go-back">
           <a href="#top">
-            {goBackButton}
+            {go_back_button}
             <FaAngleUp size={20} />
           </a>
         </div>
       </Container>
     </Content>
   );
-}
+};
+
+export default Footer;

@@ -9,11 +9,11 @@ import IconUSA from '../../assets/usa-flag.svg';
 
 import { Container, Content, SmallMenu, LargeMenu, MenuIcon } from './styles';
 
-export default function NavBar() {
+const NavBar: React.FC = () => {
   const {
-    aboutLink,
-    productLink,
-    contactLink,
+    about_link,
+    product_link,
+    contact_link,
     handleLanguagePT,
     handleLanguageEN,
   } = useLanguage();
@@ -31,10 +31,10 @@ export default function NavBar() {
 
         {/* When the page is MORE than 850px wide, this Menu will have display: block */}
         <LargeMenu>
-          <a href={`#${aboutLink}`}>{aboutLink}</a>
-          <a href={`#${productLink}`}>{productLink}</a>
-          <a href={`#${contactLink}`} className="contact">
-            {contactLink}
+          <a href={`#${about_link}`}>{about_link}</a>
+          <a href={`#${product_link}`}>{product_link}</a>
+          <a href={`#${contact_link}`} className="contact">
+            {contact_link}
           </a>
 
           <button
@@ -53,10 +53,10 @@ export default function NavBar() {
         <SmallMenu>
           {showMenu ? (
             <div className="links">
-              <a href={`#${aboutLink}`}>{aboutLink}</a>
-              <a href={`#${productLink}`}>{productLink}</a>
-              <a href={`#${contactLink}`} className="contact">
-                {contactLink}
+              <a href={`#${about_link}`}>{about_link}</a>
+              <a href={`#${product_link}`}>{product_link}</a>
+              <a href={`#${contact_link}`} className="contact">
+                {contact_link}
               </a>
               <div>
                 <button type="button" onClick={handleLanguagePT}>
@@ -82,4 +82,6 @@ export default function NavBar() {
       </Content>
     </Container>
   );
-}
+};
+
+export default NavBar;

@@ -7,7 +7,7 @@ import Routes from './routes';
 
 import GlobalStyles from './styles/global';
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <GlobalStyles />
@@ -18,6 +18,6 @@ function App() {
       </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;

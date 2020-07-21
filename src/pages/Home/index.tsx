@@ -19,19 +19,19 @@ import {
   MainTextSections,
 } from './styles';
 
-export default function Home() {
+const Home: React.FC = () => {
   const {
-    aboutLink,
-    productLink,
-    contactLink,
-    headerText,
-    aboutText,
+    about_link,
+    product_link,
+    contact_link,
+    header_description,
+    about_description,
     products,
-    nameDescriptionForm,
-    cellphoneDescriptionForm,
-    messageDescriptionForm,
-    messagePlaceholderForm,
-    sendButton,
+    name_description_form,
+    cellphone_description_form,
+    message_description_form,
+    message_placeholder_form,
+    send_button,
   } = useLanguage();
 
   return (
@@ -40,23 +40,23 @@ export default function Home() {
 
       <ContentPage>
         <img src={BannerLogo} alt="Canionlabs" />
-        <p>{headerText}</p>
+        <p>{header_description}</p>
         <FaAngleDoubleDown color="#ffffff" size={20} />
       </ContentPage>
 
-      <About id={aboutLink}>
+      <About id={about_link}>
         <MainTextSections>
-          {aboutLink}
+          {about_link}
           <FaAngleLeft size={25} />
         </MainTextSections>
 
-        <p>{aboutText}</p>
+        <p>{about_description}</p>
       </About>
 
-      <ProductContainer id={productLink}>
+      <ProductContainer id={product_link}>
         <MainTextSections right>
           <FaAngleRight size={25} />
-          {productLink}
+          {product_link}
         </MainTextSections>
 
         <ProductContent>
@@ -76,9 +76,9 @@ export default function Home() {
         </ProductContent>
       </ProductContainer>
 
-      <Contact id={contactLink}>
+      <Contact id={contact_link}>
         <MainTextSections>
-          {contactLink}
+          {contact_link}
           <FaAngleLeft size={25} />
         </MainTextSections>
 
@@ -89,13 +89,13 @@ export default function Home() {
             width="600"
             height="450"
             frameBorder="0"
-            allowFullScreen=""
+            allowFullScreen={undefined}
             aria-hidden="false"
-            tabIndex="0"
+            tabIndex={0}
           />
 
           <form action="https://formspree.io/caio@canionlabs.io" method="POST">
-            <span>{nameDescriptionForm}:</span>
+            <span>{name_description_form}:</span>
             <input type="text" placeholder="John Doe" name="nome" />
 
             <span>E-mail:</span>
@@ -105,18 +105,18 @@ export default function Home() {
               name="_replyto"
             />
 
-            <span>{cellphoneDescriptionForm}:</span>
+            <span>{cellphone_description_form}:</span>
             <input type="text" placeholder="(00) 0 0000-0000" name="telefone" />
 
-            <span>{messageDescriptionForm}:</span>
+            <span>{message_description_form}:</span>
             <textarea
               name="qtd de pontos"
-              rows="4"
-              placeholder={messagePlaceholderForm}
+              rows={4}
+              placeholder={message_placeholder_form}
             />
 
             <button type="submit" value="Send">
-              {sendButton}
+              {send_button}
             </button>
           </form>
         </div>
@@ -125,4 +125,6 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default Home;

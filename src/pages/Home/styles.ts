@@ -3,6 +3,11 @@ import { shade } from 'polished';
 
 const maxWidth = '1080px';
 
+// right props is optional
+interface MainTextSectionsProps {
+  right?: boolean;
+}
+
 const blink = keyframes`
   from {
     opacity: 1;
@@ -65,7 +70,7 @@ export const ContentPage = styled.div`
   }
 `;
 
-export const MainTextSections = styled.h3`
+export const MainTextSections = styled.h3<MainTextSectionsProps>`
   color: #8bc34a;
   font-size: 25px;
   margin-bottom: 50px;
@@ -73,8 +78,8 @@ export const MainTextSections = styled.h3`
   display: flex;
   align-items: center;
 
-  ${(props) =>
-    props.right &&
+  ${({ right }) =>
+    right &&
     css`
       justify-content: flex-end;
     `}
