@@ -1,9 +1,20 @@
 import React from 'react';
+import { render } from '@testing-library/react';
+
+import Footer from '../../components/Footer';
+
+jest.mock('../../hooks/language', () => {
+  return {
+    useLanguage: () => ({
+      go_back_button: 'voltar ao topo',
+    }),
+  };
+});
 
 describe('Footer component', () => {
-  it('should be able to test the test', () => {
-    const result = 4 + 2;
+  it('should be able to render Footer component', () => {
+    const { getByText } = render(<Footer />);
 
-    expect(result).toEqual(6);
+    expect(getByText('voltar ao topo')).toBeTruthy();
   });
 });

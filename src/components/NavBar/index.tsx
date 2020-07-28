@@ -38,13 +38,18 @@ const NavBar: React.FC = () => {
           </a>
 
           <button
+            data-testid="large_button_pt"
             type="button"
             onClick={handleLanguagePT}
             className="first-button"
           >
             <img src={IconBrazil} alt="Brazil's flag" />
           </button>
-          <button type="button" onClick={handleLanguageEN}>
+          <button
+            data-testid="large_button_en"
+            type="button"
+            onClick={handleLanguageEN}
+          >
             <img src={IconUSA} alt="United states's flag" />
           </button>
         </LargeMenu>
@@ -59,10 +64,18 @@ const NavBar: React.FC = () => {
                 {contact_link}
               </a>
               <div>
-                <button type="button" onClick={handleLanguagePT}>
+                <button
+                  data-testid="small_button_pt"
+                  type="button"
+                  onClick={handleLanguagePT}
+                >
                   <img src={IconBrazil} alt="Brazil's flag" />
                 </button>
-                <button type="button" onClick={handleLanguageEN}>
+                <button
+                  data-testid="small_button_en"
+                  type="button"
+                  onClick={handleLanguageEN}
+                >
                   <img src={IconUSA} alt="United states's flag" />
                 </button>
               </div>
@@ -70,11 +83,19 @@ const NavBar: React.FC = () => {
           ) : null}
 
           {showMenu ? (
-            <MenuIcon type="button" onClick={handleShowMenu}>
+            <MenuIcon
+              data-testid="hide_menu_button"
+              type="button"
+              onClick={handleShowMenu}
+            >
               <FaTimes size={20} color="#fff" />
             </MenuIcon>
           ) : (
-            <MenuIcon type="button" onClick={handleShowMenu}>
+            <MenuIcon
+              data-testid="show_menu_button"
+              type="button"
+              onClick={handleShowMenu}
+            >
               <FaBars size={20} color="#fff" />
             </MenuIcon>
           )}
