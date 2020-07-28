@@ -78,16 +78,24 @@ const LanguageProvider: React.FC = ({ children }) => {
 
   // handle English Texts
   const handleLanguageEN = useCallback(async () => {
-    const response = await api.get<ApiResponseData>('/homepage-en');
+    try {
+      const response = await api.get<ApiResponseData>('/homepage-en');
 
-    handleStates(response.data);
+      handleStates(response.data);
+    } catch (err) {
+      console.log(err);
+    }
   }, [handleStates]);
 
   // handle Portuguese Texts
   const handleLanguagePT = useCallback(async () => {
-    const response = await api.get<ApiResponseData>('/homepage-pt');
+    try {
+      const response = await api.get<ApiResponseData>('/homepage-pt');
 
-    handleStates(response.data);
+      handleStates(response.data);
+    } catch (err) {
+      console.log(err);
+    }
   }, [handleStates]);
 
   // when the page starts, this function is called
@@ -121,10 +129,6 @@ const LanguageProvider: React.FC = ({ children }) => {
 
 function useLanguage(): LanguageContextData {
   const context = useContext(LanguageContext);
-
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
 
   return context;
 }
