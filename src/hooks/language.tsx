@@ -78,24 +78,16 @@ const LanguageProvider: React.FC = ({ children }) => {
 
   // handle English Texts
   const handleLanguageEN = useCallback(async () => {
-    try {
-      const response = await api.get<ApiResponseData>('/homepage-en');
+    const response = await api.get<ApiResponseData>('/homepage-en');
 
-      handleStates(response.data);
-    } catch (err) {
-      console.log(err);
-    }
+    handleStates(response.data);
   }, [handleStates]);
 
   // handle Portuguese Texts
   const handleLanguagePT = useCallback(async () => {
-    try {
-      const response = await api.get<ApiResponseData>('/homepage-pt');
+    const response = await api.get<ApiResponseData>('/homepage-pt');
 
-      handleStates(response.data);
-    } catch (err) {
-      console.log(err);
-    }
+    handleStates(response.data);
   }, [handleStates]);
 
   // when the page starts, this function is called
