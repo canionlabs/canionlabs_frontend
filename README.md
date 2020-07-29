@@ -17,15 +17,20 @@
 
 ```
 # install dependencies
-  yarn
+yarn
 # or
-  yarn install
+yarn install
 
 # serve with hot reload at localhost:3000
-  yarn start
+yarn start
 
 # build for production
-  yarn build
+yarn build
+
+# test the application
+yarn test
+# with coverage
+yarn test:coverage
 ```
 
 ### :memo: License:

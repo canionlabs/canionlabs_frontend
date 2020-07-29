@@ -122,10 +122,6 @@ const LanguageProvider: React.FC = ({ children }) => {
 function useLanguage(): LanguageContextData {
   const context = useContext(LanguageContext);
 
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-
   return context;
 }
 

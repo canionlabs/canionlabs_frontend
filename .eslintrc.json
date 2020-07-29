@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jest": true
     },
     "extends": [
       "plugin:react/recommended",
@@ -58,7 +59,8 @@
           "allowExpressions": true
         }
       ],
-      "react/jsx-one-expression-per-line": "off"
+      "react/jsx-one-expression-per-line": "off",
+      "no-console": "off"
     },
     "settings": {
       "import/resolver": {
